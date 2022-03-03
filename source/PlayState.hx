@@ -6,10 +6,13 @@ import flixel.FlxState;
 
 class PlayState extends FlxState
 {
+	// Defines the sprite.
 	var sprite:FlxSprite;
+	var scaleFactor = 0.1;
 
 	override public function create()
 	{
+		// Creates The Sprite
 		super.create();
 		sprite = new FlxSprite(AssetPaths.man__png);
 		sprite.x = FlxG.width / 2 - sprite.width / 2;
@@ -20,7 +23,7 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
-
+		// Keyboard Movement
 		if (FlxG.keys.pressed.A)
 			sprite.x--;
 		if (FlxG.keys.pressed.D)
@@ -41,6 +44,19 @@ class PlayState extends FlxState
 		{
 			sprite.y = FlxG.height / 2 - sprite.height / 2;
 			sprite.x = FlxG.width / 2 - sprite.width / 2;
+		}
+
+		// Mouse Movement
+		if (FlxG.mouse.pressed)
+		{
+			sprite.setPosition(FlxG.mouse.getPosition().x - sprite.width / 2, FlxG.mouse.getPosition().y - sprite.height / 2);
+		}
+		// This does something.
+		if (FlxG.mouse.justReleasedRight)
+		{
+			sprite.y = FlxG.height / 2 - sprite.height / 2;
+			sprite.x = FlxG.width / 2 - sprite.width / 2;
+			sprite.scale.set(1, 1);
 		}
 	}
 }

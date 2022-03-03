@@ -1,3 +1,7 @@
+# 0.0.2 -- 3/3/2022
+
+-Mouse Movement Pog!
+
 # 0.0.1 -- 3/3/2022
 
 -Added Movement  with WASD
