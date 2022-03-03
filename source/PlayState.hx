@@ -29,21 +29,13 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 		// Keyboard Movement
-		if (FlxG.keys.pressed.A)
+		if (FlxG.keys.pressed.A || FlxG.keys.pressed.LEFT)
 			sprite.x--;
-		if (FlxG.keys.pressed.D)
+		if (FlxG.keys.pressed.D || FlxG.keys.pressed.RIGHT)
 			sprite.x++;
-		if (FlxG.keys.pressed.W)
+		if (FlxG.keys.pressed.W || FlxG.keys.pressed.UP)
 			sprite.y--;
-		if (FlxG.keys.pressed.S)
-			sprite.y++;
-		if (FlxG.keys.pressed.LEFT)
-			sprite.x--;
-		if (FlxG.keys.pressed.RIGHT)
-			sprite.x++;
-		if (FlxG.keys.pressed.UP)
-			sprite.y--;
-		if (FlxG.keys.pressed.DOWN)
+		if (FlxG.keys.pressed.S || FlxG.keys.pressed.DOWN)
 			sprite.y++;
 		if (FlxG.keys.justPressed.SPACE)
 		{
