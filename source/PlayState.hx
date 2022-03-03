@@ -15,6 +15,10 @@ class PlayState extends FlxState
 		// Creates The Sprite
 		super.create();
 		sprite = new FlxSprite(AssetPaths.man__png);
+		// Pixel Perfect rendering
+		sprite.pixelPerfectRender = true;
+		// Pixel Perfect positioning
+		sprite.pixelPerfectPosition = true;
 		sprite.x = FlxG.width / 2 - sprite.width / 2;
 		sprite.y = FlxG.height / 2 - sprite.height / 2;
 		add(sprite);
@@ -51,7 +55,7 @@ class PlayState extends FlxState
 		{
 			sprite.setPosition(FlxG.mouse.getPosition().x - sprite.width / 2, FlxG.mouse.getPosition().y - sprite.height / 2);
 		}
-		// This does something.
+		// This does something. I just don't know what.
 		if (FlxG.mouse.justReleasedRight)
 		{
 			sprite.y = FlxG.height / 2 - sprite.height / 2;
