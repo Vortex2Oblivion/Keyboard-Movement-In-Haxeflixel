@@ -20,7 +20,7 @@ class PlayState extends FlxState
 		// Pixel Perfect positioning
 		sprite.pixelPerfectPosition = true;
 		sprite.x = FlxG.width / 2 - sprite.width / 2;
-		sprite.y = FlxG.height / 2 - sprite.height / 2; // Pixel Perfect rendering
+		sprite.y = FlxG.height / 2 - sprite.height / 2;
 		sprite.pixelPerfectRender = true;
 		add(sprite);
 	}
