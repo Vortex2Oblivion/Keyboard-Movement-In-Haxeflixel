@@ -15,10 +15,6 @@ class PlayState extends FlxState
 		// Creates The Sprite
 		super.create();
 		sprite = new FlxSprite(AssetPaths.man__png);
-		// Pixel Perfect rendering
-		sprite.pixelPerfectRender = true;
-		// Pixel Perfect positioning
-		sprite.pixelPerfectPosition = true;
 		sprite.x = FlxG.width / 2 - sprite.width / 2;
 		sprite.y = FlxG.height / 2 - sprite.height / 2;
 		add(sprite);
