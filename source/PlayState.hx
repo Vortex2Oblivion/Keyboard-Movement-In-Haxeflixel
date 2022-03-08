@@ -55,5 +55,9 @@ class PlayState extends FlxState
 			sprite.x = FlxG.width / 2 - sprite.width / 2;
 			sprite.scale.set(1, 1);
 		}
+		if (FlxG.mouse.wheel != 0)
+		{
+			sprite.scale.add(FlxG.mouse.wheel * scaleFactor, FlxG.mouse.wheel * scaleFactor);
+		}
 	}
 }
